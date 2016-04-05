@@ -7,6 +7,17 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+debug/
+release/
+ipch/
+obj/
+bin/
+*.sdf
+*.suo
+*.opensdf
+*.user
+*.log
+*.vspscc
 
 # Windows Installer files
 *.cab
