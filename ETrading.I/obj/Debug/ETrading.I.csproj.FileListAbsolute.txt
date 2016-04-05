@@ -1,0 +1,7 @@
+C:\training\ETrading\ETrading.I\bin\Debug\ETrading.I.dll
+C:\training\ETrading\ETrading.I\bin\Debug\ETrading.I.pdb
+C:\training\ETrading\ETrading.I\bin\Debug\ETrading.Domain.dll
+C:\training\ETrading\ETrading.I\bin\Debug\ETrading.Domain.pdb
+C:\training\ETrading\ETrading.I\obj\Debug\ETrading.I.csprojResolveAssemblyReference.cache
+C:\training\ETrading\ETrading.I\obj\Debug\ETrading.I.dll
+C:\training\ETrading\ETrading.I\obj\Debug\ETrading.I.pdb

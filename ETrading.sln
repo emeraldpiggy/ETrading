@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrading.Shell", "ETrading\ETrading.Shell.csproj", "{96655F84-42CC-4654-8DF2-A3ECB12099E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrading.ViewModel", "ETrading.ViewModel\ETrading.ViewModel.csproj", "{CA7CD782-8325-4E3F-941B-05C177576AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrading.View", "ETrading.View\ETrading.View.csproj", "{D8C41C77-BFFC-49C3-8662-D260D7C79FE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrading.Framework", "ETrading.Framework\ETrading.Framework.csproj", "{DF190200-E6EB-4033-A6A0-E1E028FD5629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrading.Engine", "ETrading.Engine\ETrading.Engine.csproj", "{710AD9BF-C863-4E35-810B-7004252C4D9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrading.Domain", "ETrading.Domain\ETrading.Domain.csproj", "{879DACC6-ED81-4BC4-9D7B-5EA59BA7AB5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrading.I", "ETrading.I\ETrading.I.csproj", "{6A269482-ECB6-4098-9A09-77CA3B3AFE1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96655F84-42CC-4654-8DF2-A3ECB12099E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96655F84-42CC-4654-8DF2-A3ECB12099E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96655F84-42CC-4654-8DF2-A3ECB12099E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96655F84-42CC-4654-8DF2-A3ECB12099E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7CD782-8325-4E3F-941B-05C177576AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7CD782-8325-4E3F-941B-05C177576AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7CD782-8325-4E3F-941B-05C177576AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7CD782-8325-4E3F-941B-05C177576AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C41C77-BFFC-49C3-8662-D260D7C79FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C41C77-BFFC-49C3-8662-D260D7C79FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C41C77-BFFC-49C3-8662-D260D7C79FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C41C77-BFFC-49C3-8662-D260D7C79FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF190200-E6EB-4033-A6A0-E1E028FD5629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF190200-E6EB-4033-A6A0-E1E028FD5629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF190200-E6EB-4033-A6A0-E1E028FD5629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF190200-E6EB-4033-A6A0-E1E028FD5629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710AD9BF-C863-4E35-810B-7004252C4D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710AD9BF-C863-4E35-810B-7004252C4D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710AD9BF-C863-4E35-810B-7004252C4D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710AD9BF-C863-4E35-810B-7004252C4D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{879DACC6-ED81-4BC4-9D7B-5EA59BA7AB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879DACC6-ED81-4BC4-9D7B-5EA59BA7AB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879DACC6-ED81-4BC4-9D7B-5EA59BA7AB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879DACC6-ED81-4BC4-9D7B-5EA59BA7AB5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A269482-ECB6-4098-9A09-77CA3B3AFE1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A269482-ECB6-4098-9A09-77CA3B3AFE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A269482-ECB6-4098-9A09-77CA3B3AFE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A269482-ECB6-4098-9A09-77CA3B3AFE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
