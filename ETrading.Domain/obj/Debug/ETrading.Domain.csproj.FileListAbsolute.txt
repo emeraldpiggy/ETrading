@@ -1,5 +1,0 @@
-C:\training\ETrading\ETrading.Domain\bin\Debug\ETrading.Domain.dll
-C:\training\ETrading\ETrading.Domain\bin\Debug\ETrading.Domain.pdb
-C:\training\ETrading\ETrading.Domain\obj\Debug\ETrading.Domain.csprojResolveAssemblyReference.cache
-C:\training\ETrading\ETrading.Domain\obj\Debug\ETrading.Domain.dll
-C:\training\ETrading\ETrading.Domain\obj\Debug\ETrading.Domain.pdb

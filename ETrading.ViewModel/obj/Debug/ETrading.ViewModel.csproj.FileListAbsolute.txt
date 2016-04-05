@@ -1,9 +1,0 @@
-C:\training\ETrading\ETrading.ViewModel\obj\Debug\ETrading.ViewModel.csprojResolveAssemblyReference.cache
-C:\training\ETrading\ETrading.ViewModel\bin\Debug\ETrading.ViewModel.dll
-C:\training\ETrading\ETrading.ViewModel\bin\Debug\ETrading.ViewModel.pdb
-C:\training\ETrading\ETrading.ViewModel\bin\Debug\ETrading.Domain.dll
-C:\training\ETrading\ETrading.ViewModel\bin\Debug\ETrading.Framework.dll
-C:\training\ETrading\ETrading.ViewModel\bin\Debug\ETrading.Domain.pdb
-C:\training\ETrading\ETrading.ViewModel\bin\Debug\ETrading.Framework.pdb
-C:\training\ETrading\ETrading.ViewModel\obj\Debug\ETrading.ViewModel.dll
-C:\training\ETrading\ETrading.ViewModel\obj\Debug\ETrading.ViewModel.pdb
