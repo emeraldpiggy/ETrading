@@ -22,18 +22,20 @@ namespace ETrading.Engine
 
         public Product[] Products
         {
-            get; set; }
+            get;
+            set;
+        }
 
         public decimal Score { get; set; }
         public Dictionary<Product, int> Optimize(MarketCondition[] marketCondition)
         {
             Initialize(marketCondition);
-            
+
             while (true)
             {
                 RandomizeTrades();
                 var mp = GetMarginalProfit();
-                var mr =  GetMarginalRisk();
+                var mr = GetMarginalRisk();
                 Score = mp - mr;
                 if (Score > 0)
                 {
@@ -44,12 +46,6 @@ namespace ETrading.Engine
                     return _trades;
                 }
             }
-        }
-
-        private void SampleTest()
-        {
-            _trades[Products[0]] = -10;
-            _trades[Products[1]] = 5;
         }
 
         private void Initialize(MarketCondition[] marketConditions)
@@ -100,8 +96,8 @@ namespace ETrading.Engine
 
         private double CalculateRisk(int i)
         {
-            return Products.Sum(product => (double) (product.RiskRelationship[i]*
-                                                     _productMarketCondition[product].Theo*product.Quantity));
+            return Products.Sum(product => (double)(product.RiskRelationship[i] *
+                                                     _productMarketCondition[product].Theo * product.Quantity));
         }
         private decimal GetRisk(bool calculateMarginalRisks = false, int i = 0)
         {
@@ -112,7 +108,7 @@ namespace ETrading.Engine
                 {
                     var p1 =
                         (double)
-                            (product.RiskRelationship[i]*_productMarketCondition[product].Theo*
+                            (product.RiskRelationship[i] * _productMarketCondition[product].Theo *
                              (product.Quantity + _trades[product]));
                     return p1;
                 });

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntegrationTests\SenarioOne.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="IntegrationTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -46,7 +47,10 @@
     <Compile Include="UnitTests\RiskRewardsOptimazationTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IntegrationTests\" />
+    <ProjectReference Include="..\ETrading.Domain\ETrading.Domain.csproj">
+      <Project>{879DACC6-ED81-4BC4-9D7B-5EA59BA7AB5D}</Project>
+      <Name>ETrading.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
