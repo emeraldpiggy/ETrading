@@ -44,7 +44,7 @@ namespace ETrading.Framework.GCNotifier
 
         static GCNotifier()
         {
-            bool enable = ConfigManager.Instance.Get("EnableGCNotifier", true);
+            bool enable = true;
             if (enable)
             {
                 _notifierThread = new GCNotifierThread(TimeSpan.FromSeconds(5)) { GCThrottle = TimeSpan.FromSeconds(10) };

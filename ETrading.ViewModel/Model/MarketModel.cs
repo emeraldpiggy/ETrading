@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using ETrading.Domain.Entities;
 using ETrading.Framework;
 
@@ -16,7 +17,7 @@ namespace ETrading.ViewModel.Model
         {
             ProductCode = p.ProductCode;
             PortifolioPosition = p.Quantity;
-            Time = DateTime.Now.ToString();
+            Time = DateTime.Now.ToString(CultureInfo.InvariantCulture);
         }
 
         public MarketModel(Product p, decimal newpoistion)
@@ -24,7 +25,7 @@ namespace ETrading.ViewModel.Model
 
             ProductCode += p.ProductCode;
             PortifolioPosition = newpoistion;
-            Time = DateTime.Now.ToString();
+            Time = DateTime.Now.ToString(CultureInfo.InvariantCulture);
         }
 
 

@@ -943,4 +943,3 @@ namespace ETrading.Framework.Events
         }
     }
 }
-}

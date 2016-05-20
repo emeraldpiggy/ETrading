@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics.Tracing;
 using System.Windows;
 using System.Windows.Markup;
 
@@ -37,7 +36,7 @@ namespace ETrading.Framework.MarkupExtensions
                     CommandName = CommandName
                 };
 
-                Events.GetCommands((UIElement)target.TargetObject).Add(command);
+                Events.Events.GetCommands((UIElement)target.TargetObject).Add(command);
             }
 
             return null;

@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace ETrading.Framework.Events
 {
-    public class WeakEventsExtension
+    public static class WeakEventsExtension
     {
         public static IWeakRegistration<RoutedEventHandler> RegisterWeakEvent<TPublisher>(this TPublisher value, RoutedEventHandler targetDelegate,
                                    Action<TPublisher, RoutedEventHandler> register,
@@ -21,7 +17,7 @@ namespace ETrading.Framework.Events
             {
                 if (!val.Dispatcher.CheckAccess())
                 {
-                    val.Dispatcher.BeginInvoke(() => unregister(val, d));
+                    val.Dispatcher.BeginInvoke(new Action(() => unregister(val, d)));
                 }
                 else
                 {

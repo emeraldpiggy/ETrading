@@ -33,6 +33,7 @@ namespace ETrading.Framework.GCNotifier
         private readonly Stopwatch _lastCollection = new Stopwatch();
         private bool _hasChanges;
         private TimeSpan _gcThrottle = TimeSpan.FromSeconds(1);
+
         #endregion
 
         #region Properties
@@ -105,7 +106,7 @@ namespace ETrading.Framework.GCNotifier
             _loop = true;
             if (!disableGCForTesting)
             {
-                Internal.GCCollected.Create();
+                GcCollected.Create();
             }
         }
 
@@ -268,7 +269,7 @@ namespace ETrading.Framework.GCNotifier
 
             if (!_disableGCForTesting && gc)
             {
-                Internal.GCCollected.Create();
+                GcCollected.Create();
             }
         }
 
@@ -351,5 +352,51 @@ namespace ETrading.Framework.GCNotifier
 
 
 
+    }
+
+    internal enum NotifierType
+    {
+        GC,
+        Add,
+        Remove,
+        Pump,
+        Collect,
+        Timed
+    }
+
+    internal class GCNotifierBuffer
+    {
+        public GCNotifierBuffer(int i, int i1)
+        {
+        }
+
+        public int Count { get; set; }
+        public int Capacity { get; set; }
+
+        public void Add(IGCNotifierRegistration handler)
+        {
+        }
+
+        public void Process(bool b, IGCNotifierRegistration[] removeList)
+        {
+        }
+    }
+
+    public class IGCNotifierRegistration
+    {
+    }
+
+    internal class GCNotifierMessage
+    {
+        public GCNotifierMessage(NotifierType gc, Action o)
+        {
+        }
+
+        public NotifierType Type { get; set; }
+
+        public void Action()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

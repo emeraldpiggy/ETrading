@@ -31,8 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,9 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseViewModel.cs" />
+    <Compile Include="Disposables.cs" />
+    <Compile Include="Disposer.cs" />
     <Compile Include="Events\EventCollection.cs" />
     <Compile Include="Events\EventCommand.cs" />
     <Compile Include="Events\Events.cs" />
+    <Compile Include="GCNotifier\IDisposableInfo.cs" />
     <Compile Include="Events\IWeakEventDelegate.cs" />
     <Compile Include="Events\IWeakRegistration.cs" />
     <Compile Include="Events\WeakDelegateFactory.cs" />
@@ -55,16 +60,16 @@
     <Compile Include="GCNotifier\GcNotifier.cs" />
     <Compile Include="GCNotifier\GcNotifierThread.cs" />
     <Compile Include="GCNotifier\IGCNotifierRegistration.cs" />
+    <Compile Include="Helper\Extension.cs" />
     <Compile Include="MarkupExtensions\EventBindingExtension.cs" />
+    <Compile Include="MVVM\ViewModelDisposableBase.cs" />
     <Compile Include="NotifyCollection.cs" />
     <Compile Include="PerformanceTrace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reflection\TypeExtension.cs" />
     <Compile Include="Threading\ReaderWriterLockSlimExtension.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MVVM\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="Events\WeakDelegateFactory.Template.cs" />
   </ItemGroup>

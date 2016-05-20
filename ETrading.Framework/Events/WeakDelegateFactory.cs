@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -11,7 +10,8 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Text;
-using System.Threading.Tasks;
+using ETrading.Framework.GCNotifier;
+using ETrading.Framework.Reflection;
 
 namespace ETrading.Framework.Events
 {
@@ -31,8 +31,8 @@ namespace ETrading.Framework.Events
 
         private static readonly MethodInfo _weakReferenceGetObjectData = typeof(WeakReference).GetMethod("GetObjectData");
         private static readonly MethodInfo _disposalInfoIsDisposedGetter = typeof(IDisposableInfo).GetProperty("IsDisposed").GetGetMethod();
-        private static readonly MethodInfo _notifierGarbageCollectedAdd = typeof(GCNotifier).GetMethod("Register", BindingFlags.Public | BindingFlags.Static);
-        private static readonly MethodInfo _notifierGarbageCollectedRemove = typeof(GCNotifier).GetMethod("UnRegister", BindingFlags.Public | BindingFlags.Static);
+        private static readonly MethodInfo _notifierGarbageCollectedAdd = typeof(GCNotifier.GCNotifier).GetMethod("Register", BindingFlags.Public | BindingFlags.Static);
+        private static readonly MethodInfo _notifierGarbageCollectedRemove = typeof(GCNotifier.GCNotifier).GetMethod("UnRegister", BindingFlags.Public | BindingFlags.Static);
         private static readonly MethodInfo _logWarning = typeof(WeakDelegateFactory).GetMethod("LogWarning", BindingFlags.Public | BindingFlags.Static);
         private static readonly ConstructorInfo _serializableAttribute = typeof(SerializableAttribute).GetConstructors()[0];
 
@@ -193,14 +193,12 @@ namespace ETrading.Framework.Events
             sb.AppendLine("\t[assembly: InternalsVisibleTo(\"TW.Framework.WeakTypes\")]");
             sb.AppendLine();
             sb.Append("Type Info ");
-            sb.AppendLine("-".Repeat(22));
             int level = 0;
             sb.AppendLine();
             LogTypeInfo(sb, targetType, ref level);
             sb.AppendLine();
-            sb.AppendLine("-".Repeat(32));
             var result = sb.ToString();
-            LogManager.LogDebug(typeof(WeakDelegateFactory), result);
+            
             Debug.WriteLine(result);
             return result;
 #else
@@ -212,8 +210,6 @@ namespace ETrading.Framework.Events
         private static void LogTypeInfo(StringBuilder sb, Type type, ref int level)
         {
             level++;
-            var tabs = " ".Repeat(level * 3);
-            sb.Append(string.Format("{0}{1}", tabs, type.Name));
             sb.AppendLine(string.Format("{0}({1})", "\t", type.Assembly.ManifestModule));
 
             if (type.IsGenericType)
@@ -233,7 +229,6 @@ namespace ETrading.Framework.Events
             var gcCol = methodInfo.GCCollect ? "GC" : string.Empty;
 
             var decType = method.DeclaringType;
-            decType.NullCheck("");
 
             var sb = new StringBuilder();
             ParseTypeName(sb, decType);
@@ -350,7 +345,6 @@ namespace ETrading.Framework.Events
         public static IWeakRegistration<TDelegate> ToWeakRegistration<TDelegate>(this TDelegate handler, Action<TDelegate> fnUnregister) where TDelegate : class
         {
             var del = Template<TDelegate>.CreateWeak(handler, fnUnregister, true) as Delegate;
-            del.NullCheck("Delegate is null");
             return del.Target as IWeakRegistration<TDelegate>;
         }
 
