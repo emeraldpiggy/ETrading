@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace ETrading.Engine
 {
     public class GradientDescent
-    {
+    {   
     }
 }
