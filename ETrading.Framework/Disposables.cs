@@ -36,7 +36,7 @@ namespace ETrading.Framework
         {
             if (capacity < 0)
             {
-                throw new ArgumentOutOfRangeException("capacity");
+                throw new ArgumentOutOfRangeException(nameof(capacity));
             }
             _disposables = new List<IDisposable>(capacity);
         }
@@ -45,7 +45,7 @@ namespace ETrading.Framework
         {
             if (disposables == null)
             {
-                throw new ArgumentNullException("disposables");
+                throw new ArgumentNullException(nameof(disposables));
             }
             _disposables = new List<IDisposable>(disposables);
         }
@@ -54,7 +54,7 @@ namespace ETrading.Framework
         {
             if (disposables == null)
             {
-                throw new ArgumentNullException("disposables");
+                throw new ArgumentNullException(nameof(disposables));
             }
             _disposables = new List<IDisposable>(disposables);
         }
@@ -63,7 +63,7 @@ namespace ETrading.Framework
         {
             if (!(item is IDisposable))
             {
-                throw new ArgumentException("Not of type IDisposable", "item");
+                throw new ArgumentException("Not of type IDisposable", nameof(item));
             }
             Add((IDisposable)item);
         }
@@ -78,7 +78,7 @@ namespace ETrading.Framework
         {
             if (item == null)
             {
-                throw new ArgumentNullException("item");
+                throw new ArgumentNullException(nameof(item));
             }
             bool flag;
             lock (_sync)
@@ -105,7 +105,7 @@ namespace ETrading.Framework
         {
             if (item == null)
             {
-                throw new ArgumentNullException("item");
+                throw new ArgumentNullException(nameof(item));
             }
             bool flag = false;
             lock (_sync)
@@ -182,11 +182,11 @@ namespace ETrading.Framework
         {
             if (array == null)
             {
-                throw new ArgumentNullException("array");
+                throw new ArgumentNullException(nameof(array));
             }
             if (arrayIndex < 0 || arrayIndex >= array.Length)
             {
-                throw new ArgumentOutOfRangeException("arrayIndex");
+                throw new ArgumentOutOfRangeException(nameof(arrayIndex));
             }
             lock (_sync)
             {
